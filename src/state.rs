@@ -1,6 +1,8 @@
 /*
     This file defines the structure of the systems memory state.
  */
+
+
 #[allow(dead_code)]
 pub struct RegisterFile {
     rax: i64,

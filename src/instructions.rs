@@ -1,5 +1,4 @@
 mod state;
-
 /*
     Argument free instructions. NOP is a valid instruction, but not worth actually writing a
     function for.

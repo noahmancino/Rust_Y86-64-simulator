@@ -13,9 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/model/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/instructions.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602788956978</updated>
-      <workItem from="1602788958101" duration="13072000" />
+      <workItem from="1602788958101" duration="13994000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -134,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602801419116</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="More outlining with comments.">
+      <created>1602802568820</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602802568820</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,13 +150,14 @@
     <MESSAGE value="README.md" />
     <MESSAGE value="defined memory, restructured files." />
     <MESSAGE value="Outline for instruction functions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Outline for instruction functions." />
+    <MESSAGE value="More outlining with comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="More outlining with comments." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602801419074">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602802568762">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602801419074" />
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602802568762" />
     <state width="1317" height="191" key="GridCell.Tab.0.bottom" timestamp="1602798081500">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -168,18 +174,18 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1317" height="191" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602798081500" />
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602801422058">
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602802593199">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602801422058" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602802593199" />
     <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602797852965">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1602797852965" />
-    <state x="473" y="334" width="419" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602797775029">
+    <state x="473" y="334" width="429" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602802587808">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="473" y="334" width="419" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1602797775029" />
+    <state x="473" y="334" width="429" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1602802587808" />
     <state x="351" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1602799947983">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

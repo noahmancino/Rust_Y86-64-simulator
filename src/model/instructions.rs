@@ -7,6 +7,7 @@ mod state;
 // Changes system state to halt. This will stop the system from executing new instructions.
 fn halt(mut sys_state: state::State) {
     sys_state.stat = state::Status::HLT;
+    sys_state.PC += 1;
 }
 
 /*
@@ -16,6 +17,7 @@ fn halt(mut sys_state: state::State) {
  */
 fn op(mut sys_state: state::State, src: i32, dest: i32) {
     sys_state.registers[dest] = sys_state.registers[src] - sys_state.registers[dest];
+    sys_state.PC += 2;
 }
 
 /*

@@ -13,10 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/instructions.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/memory.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/state.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602788956978</updated>
-      <workItem from="1602788958101" duration="11517000" />
+      <workItem from="1602788958101" duration="12003000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -115,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602797738580</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Outline for instruction functions.">
+      <created>1602800944993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602800944993</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,13 +129,14 @@
     <MESSAGE value="init" />
     <MESSAGE value="README.md" />
     <MESSAGE value="defined memory, restructured files." />
-    <option name="LAST_COMMIT_MESSAGE" value="defined memory, restructured files." />
+    <MESSAGE value="Outline for instruction functions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Outline for instruction functions." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602797738479">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602800944943">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602797738479" />
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602800944943" />
     <state width="1317" height="191" key="GridCell.Tab.0.bottom" timestamp="1602798081500">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

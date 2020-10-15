@@ -13,6 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/instructions.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +50,11 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/model" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
@@ -89,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602788956978</updated>
-      <workItem from="1602788958101" duration="12003000" />
+      <workItem from="1602788958101" duration="13072000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -119,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602800944993</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Outline for instruction functions.">
+      <created>1602801419116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602801419116</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,10 +148,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Outline for instruction functions." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602800944943">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602801419074">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602800944943" />
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602801419074" />
     <state width="1317" height="191" key="GridCell.Tab.0.bottom" timestamp="1602798081500">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -153,10 +168,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="1317" height="191" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602798081500" />
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602797860173">
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602801422058">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602797860173" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602801422058" />
     <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602797852965">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

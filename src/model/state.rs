@@ -20,17 +20,6 @@ pub struct RegisterFile {
     r14: i64
 }
 
-#[allow(dead_code)]
-// Condition codes set after arithmetic and logical instructions. Jump instructions look at these.
-pub enum ConditionCode {
-    // Negative result.
-    ZF,
-    // Signed result.
-    SF,
-    // Overflow.
-    OF
-}
-
 // "Processor" status code
 #[allow(dead_code)]
 pub enum Status {
@@ -45,10 +34,14 @@ pub enum Status {
 }
 
 #[allow(dead_code)]
-pub struct Mem {
-    pub main: [i64; 10000],
+pub struct State {
+    pub main: [i64; 1000],
     pub registers: [i64; 15],
-    pub condition: ConditionCode,
-    pub counter: i64,
-    pub stat: Status
+    // Program counter.
+    pub PC: i64,
+    pub stat: Status,
+    // Condition flags for jmp instructions.
+    pub OF: bool,
+    pub SF: bool,
+    pub ZF: bool,
 }

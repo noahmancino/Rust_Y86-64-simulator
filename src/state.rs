@@ -37,7 +37,11 @@ pub enum Status {
 
 #[allow(dead_code)]
 pub struct State {
-    pub main: [i64; 1000],
+    /*
+        Main memory is private as a nod to the fact that operations on main memory involve I/O.
+        Note: In the Toy system, everything is big endian.
+     */
+    main: [i8; 5000],
     pub registers: [i64; 15],
     // Program counter.
     pub PC: i64,
@@ -46,4 +50,30 @@ pub struct State {
     pub OF: bool,
     pub SF: bool,
     pub ZF: bool,
+}
+
+impl State {
+    pub fn new() -> Self {
+        Self {
+            main: [0; 5000],
+            registers: [0; 15],
+            PC: 0,
+            stat: Status::AOK,
+            OF: false,
+            SF: false,
+            ZF: false,
+        }
+    }
+
+    // TODO: Deal with indexes >4090
+    /*
+        Reading ten bytes at a time is convenient because that is the size of the largest
+        instruction.
+     */
+    pub fn read_mem(&self, index: i8) -> [i8; 10] {
+        let x: [i8; 10] = [0; 10];
+        x
+    }
+
+
 }

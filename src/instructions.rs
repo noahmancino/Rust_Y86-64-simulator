@@ -1,12 +1,12 @@
-mod state;
+use crate::state::*;
 /*
     Argument free instructions. NOP is a valid instruction, but not worth actually writing a
     function for.
  */
 
 // Changes system state to halt. This will stop the system from executing new instructions.
-fn halt(mut sys_state: state::State) {
-    sys_state.stat = state::Status::HLT;
+fn halt(mut sys_state: State) {
+    sys_state.stat = Status::HLT;
     sys_state.PC += 1;
 }
 
@@ -15,7 +15,7 @@ fn halt(mut sys_state: state::State) {
     two registers, src and dest, and store the result in dest. These instructions also set
     condition codes.
  */
-fn op(mut sys_state: state::State, src: i32, dest: i32) {
+fn op(mut sys_state: State, src: i8, dest: i8) {
     sys_state.registers[dest] = sys_state.registers[src] - sys_state.registers[dest];
     sys_state.PC += 2;
 }

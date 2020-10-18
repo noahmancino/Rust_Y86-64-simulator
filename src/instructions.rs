@@ -15,8 +15,29 @@ fn halt(mut sys_state: State) {
     two registers, src and dest, and store the result in dest. These instructions also set
     condition codes.
  */
-fn op(mut sys_state: State, src: i8, dest: i8) {
-    sys_state.registers[dest] = sys_state.registers[src] - sys_state.registers[dest];
+pub fn op(mut sys_state: State, src: i8, dest: i8, op_code: i8) {
+    let src_val = sys_state.registers[src as usize];
+    let dest_val = sys_state.registers[dest as usize];
+    let val_op = match op_code {
+        0 => dest_val.overflowing_add(src_val),
+        1 => dest_val.overflowing_sub(src_val),
+        2 => (src_val & dest_val, false),
+        3 => (src_val ^ dest_val, false),
+        _ => {
+            sys_state.stat = Status::INS;
+            // Garbage value because we need to return something.
+            (0, false)
+        }
+    };
+    match sys_state.stat {
+        Status::AOK => {
+            sys_state.registers[dest as usize] = val_op.0;
+            sys_state.OF = val_op.1;
+            sys_state.ZF = val_op.0 == 0;
+            sys_state.SF = val_op.0 < 0;
+        }
+        _ => ()
+    };
     sys_state.PC += 2;
 }
 

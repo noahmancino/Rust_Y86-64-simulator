@@ -69,9 +69,10 @@ impl State {
     /*
         Reading ten bytes at a time is convenient because that is the size of the largest
         instruction.
-     */
-    pub fn read_mem(&self, index: i8) -> [i8; 10] {
-        let x: [i8; 10] = [0; 10];
+    */
+    pub fn read_mem(&self, index: u16) -> Vec<i8> {
+        let mut x: Vec<i8> = vec![0; 10];
+        x.copy_from_slice(&(self.main[index as usize .. (index as usize + 10)]));
         x
     }
 

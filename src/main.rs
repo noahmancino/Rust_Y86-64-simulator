@@ -27,6 +27,6 @@ fn main() {
     let mut sys_state: state::State  = state::State::new();
     sys_state.registers[0] = 10;
     sys_state.registers[1] = 15;
-    decode::op_test(sys_state);
+    sys_state = decode::op_test(sys_state);
     println!("Register 0: {}", sys_state.registers[0]);
 }

@@ -17,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/src/decode.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/decode.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/instructions.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package ISA_project --bin ISA_project" />
@@ -88,7 +92,7 @@
       <workItem from="1602788958101" duration="16540000" />
       <workItem from="1602893932875" duration="92000" />
       <workItem from="1602961494343" duration="3878000" />
-      <workItem from="1602988888467" duration="6254000" />
+      <workItem from="1602988888467" duration="7640000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -139,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602804176552</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Made some progress.">
+      <created>1602995907683</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602995907683</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,37 +163,38 @@
     <MESSAGE value="Outline for instruction functions." />
     <MESSAGE value="More outlining with comments." />
     <MESSAGE value="Moving away from MVC idea." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving away from MVC idea." />
+    <MESSAGE value="Made some progress." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some progress." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602804176470">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1602995907554">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602804176470" />
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1602995907554" />
     <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602894022477">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1602894022477" />
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1602995810430">
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1603000941070">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1602995810430" />
-    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1602995810430">
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603000941070" />
+    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1603000941069">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1602995810430" />
-    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1602995810429">
+    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603000941069" />
+    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1603000941067">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1602995810429" />
-    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1602995810430">
+    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603000941067" />
+    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1603000941069">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1602995810430" />
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602802593199">
+    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603000941069" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602995910238">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602802593199" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1602995910238" />
     <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602797852965">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

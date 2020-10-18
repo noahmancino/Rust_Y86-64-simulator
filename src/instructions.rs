@@ -15,7 +15,7 @@ fn halt(mut sys_state: State) {
     two registers, src and dest, and store the result in dest. These instructions also set
     condition codes.
  */
-pub fn op(mut sys_state: State, src: i8, dest: i8, op_code: i8) {
+pub fn op(mut sys_state: State, src: i8, dest: i8, op_code: i8) -> State {
     let src_val = sys_state.registers[src as usize];
     let dest_val = sys_state.registers[dest as usize];
     let val_op = match op_code {
@@ -39,6 +39,7 @@ pub fn op(mut sys_state: State, src: i8, dest: i8, op_code: i8) {
         _ => ()
     };
     sys_state.PC += 2;
+    sys_state
 }
 
 /*

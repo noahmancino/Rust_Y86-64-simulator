@@ -113,7 +113,8 @@ pub fn irmovq(mut sys_state: State, immediate: i64, dest: i8) -> State {
     Moves a value from register to memory.
  */
 
-pub fn rmmovq(mut sys_state: State, src: i8, dest: usize) -> State {
+pub fn rmmovq(mut sys_state: State, src: i8, dest_reg: i8) -> State {
+    let dest = sys_state.registers[dest_reg] as usize;
     let mut byte: i8;
     for x in 7..0 {
         byte = extract_byte(x, sys_state.registers[src as usize]);
@@ -123,7 +124,8 @@ pub fn rmmovq(mut sys_state: State, src: i8, dest: usize) -> State {
     sys_state
 }
 
-pub fn mrmovq(mut sys_state: State, src: usize, dest: i8) -> State {
+pub fn mrmovq(mut sys_state: State, src_reg: i8, dest: i8) -> State {
+    let src = sys_state.registers[src_reg] as usize;
     sys_state.read_mem(src);
     sys_state.registers[dest as usize] = combine_bytes(&sys_state);
     sys_state.program_counter += 10;

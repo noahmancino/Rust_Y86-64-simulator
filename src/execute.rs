@@ -1,11 +1,18 @@
 use crate::state::*;
 use crate::instructions::*;
 
-pub fn op_test(mut sys_state: State) -> State {
-    sys_state.read_mem(0);
-    let data = sys_state.mem_bus;
-    let op_code = (data[0] & 0xf);
-    sys_state = op(sys_state, 1, 0, op_code);
+pub fn instruction_cycle(mut sys_state: State) {
+    sys_state.read_mem(sys_state.program_counter);
+    let instruction_specifier = sys_state.mem_bus[0];
+    let instruction_type = instruction_specifier & 0xf0;
+    let instruction_function = instruction_specifier & 0xf;
+    match instruction_type {
+        0 =>
+    }
+}
 
-    return sys_state
+fn movq_family(mut sys_state: State, op_fn: i8) {
+    match op_fn {
+
+    }
 }

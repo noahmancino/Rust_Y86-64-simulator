@@ -13,11 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/decode.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/execute.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/execute.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/execute.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/instructions.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +92,7 @@
       <workItem from="1602961494343" duration="3878000" />
       <workItem from="1602988888467" duration="9770000" />
       <workItem from="1603129039376" duration="138000" />
-      <workItem from="1603923547556" duration="13137000" />
+      <workItem from="1603923547556" duration="14188000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -167,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603002307787</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finished instructions.">
+      <created>1603937313770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1603937313770</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,33 +187,34 @@
     <MESSAGE value="Made some progress." />
     <MESSAGE value="My test passed but I may have to change my whole API. I should have learned about ownership before I started writing code..." />
     <MESSAGE value="Quick fix! Ownership is a pretty cool idea and the compiler is pretty helpful." />
-    <option name="LAST_COMMIT_MESSAGE" value="Quick fix! Ownership is a pretty cool idea and the compiler is pretty helpful." />
+    <MESSAGE value="Finished instructions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished instructions." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1603002307697">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1603937313656">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1603002307697" />
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1603937313656" />
     <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603129170561">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1603129170561" />
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1603937249873">
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1603937293564">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603937249873" />
-    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1603937249873">
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603937293564" />
+    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1603937293561">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603937249873" />
-    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1603937249872">
+    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603937293561" />
+    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1603937293559">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603937249872" />
-    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1603937249873">
+    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603937293559" />
+    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1603937293562">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603937249873" />
+    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603937293562" />
     <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603002314813">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

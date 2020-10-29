@@ -22,26 +22,28 @@ pub struct State {
         Note: In the Toy system, everything is big endian.
      */
     main: [i8; 5000],
+    pub mem_bus: [i8; 10],
     pub registers: [i64; 15],
-    // Program counter.
-    pub PC: i64,
-    pub stat: Status,
+    pub program_counter: usize,
+    pub status: Status,
     // Condition flags for jmp instructions.
-    pub OF: bool,
-    pub SF: bool,
-    pub ZF: bool,
+    pub overflow_flag: bool,
+    pub sign_flag: bool,
+    pub zero_flag: bool,
+
 }
 
 impl State {
     pub fn new() -> Self {
         Self {
             main: [0; 5000],
+            mem_bus: [0; 10],
             registers: [0; 15],
-            PC: 0,
-            stat: Status::AOK,
-            OF: false,
-            SF: false,
-            ZF: false,
+            program_counter: 0,
+            status: Status::AOK,
+            overflow_flag: false,
+            sign_flag: false,
+            zero_flag: false,
         }
     }
 
@@ -50,10 +52,14 @@ impl State {
         Reading ten bytes at a time is convenient because that is the size of the largest
         instruction.
     */
-    pub fn read_mem(&self, index: u16) -> Vec<i8> {
-        let mut x: Vec<i8> = vec![0; 10];
-        x.copy_from_slice(&(self.main[index as usize .. (index as usize + 10)]));
-        x
+    pub fn read_mem(&mut self, index: usize) {
+        for x in 0..9 {
+            self.mem_bus[x] = self.main[x + index];
+        }
+    }
+
+    pub fn write_mem(&mut self, index: usize, val: i8) {
+        self.main[index] = val;
     }
 
 

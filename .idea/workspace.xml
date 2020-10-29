@@ -14,6 +14,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/decode.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/execute.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/instructions.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +60,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package ISA_project --bin ISA_project" />
@@ -72,6 +70,11 @@
       <envs />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -90,7 +93,9 @@
       <workItem from="1602788958101" duration="16540000" />
       <workItem from="1602893932875" duration="92000" />
       <workItem from="1602961494343" duration="3878000" />
-      <workItem from="1602988888467" duration="8096000" />
+      <workItem from="1602988888467" duration="9770000" />
+      <workItem from="1603129039376" duration="138000" />
+      <workItem from="1603923547556" duration="13137000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -155,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603001236950</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Quick fix! Ownership is a pretty cool idea and the compiler is pretty helpful.">
+      <created>1603002307787</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603002307787</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,37 +182,38 @@
     <MESSAGE value="Moving away from MVC idea." />
     <MESSAGE value="Made some progress." />
     <MESSAGE value="My test passed but I may have to change my whole API. I should have learned about ownership before I started writing code..." />
-    <option name="LAST_COMMIT_MESSAGE" value="My test passed but I may have to change my whole API. I should have learned about ownership before I started writing code..." />
+    <MESSAGE value="Quick fix! Ownership is a pretty cool idea and the compiler is pretty helpful." />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick fix! Ownership is a pretty cool idea and the compiler is pretty helpful." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1603001236855">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1603002307697">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1603001236855" />
-    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602894022477">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1603002307697" />
+    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603129170561">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1602894022477" />
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1603001477665">
+    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1603129170561" />
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1603937249873">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603001477665" />
-    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1603001477663">
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1603937249873" />
+    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1603937249873">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603001477663" />
-    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1603001477662">
+    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1603937249873" />
+    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1603937249872">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603001477662" />
-    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1603001477664">
+    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1603937249872" />
+    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1603937249873">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603001477664" />
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603002272360">
+    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1603937249873" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603002314813">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1603002272360" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1603002314813" />
     <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602797852965">
       <screen x="0" y="27" width="1366" height="741" />
     </state>

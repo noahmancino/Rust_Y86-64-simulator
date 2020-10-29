@@ -113,6 +113,11 @@ pub fn irmovq(mut sys_state: State, immediate: i64, dest: i8) -> State {
     Moves a value from register to memory.
  */
 
+pub fn rrmovq(mut sys_state: State, src: i8, dest: i8) {
+    sys_state.registers[dest] = sys_state.registers[src];
+    sys_state.program_counter += 2;
+}
+
 pub fn rmmovq(mut sys_state: State, src: i8, dest_reg: i8) -> State {
     let dest = sys_state.registers[dest_reg] as usize;
     let mut byte: i8;

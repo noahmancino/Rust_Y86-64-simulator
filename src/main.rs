@@ -12,11 +12,6 @@ fn execute_next(mut sys_state: state::State) {
 */
 
 
-// Sets up default memory state.
-/*
-fn initial_state(mut sys_state: state::State) {
-}
-*/
 
 /*
     Initializes default system state, loads the program into memory and executes a single

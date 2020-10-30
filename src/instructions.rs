@@ -1,14 +1,14 @@
 use crate::state::*;
 
-fn extract_byte(byte: i8, val: i64) -> i8 {
+pub fn extract_byte(byte: i8, val: i64) -> u8 {
     let mask = 0xff;
     let extracted = (val >> (8 * byte)) & mask;
-    extracted as i8
+    extracted as u8
 }
 
-fn combine_bytes(sys_state: &State) -> i64 {
+pub fn combine_bytes(sys_state: &State) -> i64 {
     let mut combined = 0;
-    for x in 0..7 {
+    for x in 0..8 {
         combined = combined << 8;
         combined |= sys_state.mem_bus[x] as i64
     }
@@ -31,7 +31,7 @@ pub fn halt(mut sys_state: State) -> State {
     two registers, src and dest, and store the result in dest. These instructions also set
     condition codes.
  */
-pub fn op(mut sys_state: State, src: i8, dest: i8, op_code: i8) -> State {
+pub fn op(mut sys_state: State, src: u8, dest: u8, op_code: u8) -> State {
     let src_val = sys_state.registers[src as usize];
     let dest_val = sys_state.registers[dest as usize];
     let val_op = match op_code {
@@ -62,7 +62,7 @@ pub fn op(mut sys_state: State, src: i8, dest: i8, op_code: i8) -> State {
     Jump instructions. These instructions will jump to an address or do nothing depending on the
     state of the system's condition codes.
  */
-pub fn jxx(mut sys_state: State, dest: usize, op_code: i8) -> State {
+pub fn jxx(mut sys_state: State, dest: usize, op_code: u8) -> State {
     let will_branch = match op_code {
         // jmp
         0 => true,
@@ -75,9 +75,9 @@ pub fn jxx(mut sys_state: State, dest: usize, op_code: i8) -> State {
         // jne
         4 => !sys_state.zero_flag,
         // jge
-        5 => sys_state.zero_flag || !(sys_state.sign_flag ^ sys_state.overflow_flag),
+        5 => sys_state.zero_flag || sys_state.sign_flag == sys_state.overflow_flag,
         // jg
-        6 => !(sys_state.sign_flag ^ sys_state.overflow_flag),
+        6 => sys_state.sign_flag == sys_state.overflow_flag && !sys_state.zero_flag,
         //
         _ => {
             sys_state.status = Status::INS;
@@ -103,7 +103,7 @@ pub fn jxx(mut sys_state: State, dest: usize, op_code: i8) -> State {
 /*
     Moves an immediate value to a register.
  */
-pub fn irmovq(mut sys_state: State, immediate: i64, dest: i8) -> State {
+pub fn irmovq(mut sys_state: State, immediate: i64, dest: u8) -> State {
     sys_state.registers[dest as usize] = immediate;
     sys_state.program_counter += 10;
     sys_state
@@ -113,14 +113,15 @@ pub fn irmovq(mut sys_state: State, immediate: i64, dest: i8) -> State {
     Moves a value from register to memory.
  */
 
-pub fn rrmovq(mut sys_state: State, src: i8, dest: i8) {
-    sys_state.registers[dest] = sys_state.registers[src];
+pub fn rrmovq(mut sys_state: State, src: u8, dest: u8) -> State {
+    sys_state.registers[dest as usize] = sys_state.registers[src as usize];
     sys_state.program_counter += 2;
+    sys_state
 }
 
-pub fn rmmovq(mut sys_state: State, src: i8, dest_reg: i8) -> State {
-    let dest = sys_state.registers[dest_reg] as usize;
-    let mut byte: i8;
+pub fn rmmovq(mut sys_state: State, src: u8, dest_reg: u8, displacement: usize) -> State {
+    let dest = sys_state.registers[dest_reg as usize] as usize + displacement;
+    let mut byte: u8;
     for x in 7..0 {
         byte = extract_byte(x, sys_state.registers[src as usize]);
         sys_state.write_mem(dest, byte)
@@ -129,15 +130,15 @@ pub fn rmmovq(mut sys_state: State, src: i8, dest_reg: i8) -> State {
     sys_state
 }
 
-pub fn mrmovq(mut sys_state: State, src_reg: i8, dest: i8) -> State {
-    let src = sys_state.registers[src_reg] as usize;
+pub fn mrmovq(mut sys_state: State, src_reg: u8, dest: u8, displacement: usize) -> State {
+    let src = sys_state.registers[src_reg as usize] as usize + displacement;
     sys_state.read_mem(src);
     sys_state.registers[dest as usize] = combine_bytes(&sys_state);
     sys_state.program_counter += 10;
     sys_state
 }
 
-pub fn cmovxx(mut sys_state: State, src: i8, dest: i8, op_code:i8) -> State {
+pub fn cmovxx(mut sys_state: State, src: u8, dest: u8, op_code: u8) -> State {
     let will_move = match op_code {
         1 => sys_state.zero_flag || (sys_state.sign_flag ^ sys_state.overflow_flag),
         2 => (sys_state.sign_flag ^ sys_state.overflow_flag),
@@ -164,23 +165,26 @@ pub fn cmovxx(mut sys_state: State, src: i8, dest: i8, op_code:i8) -> State {
     sys_state
 }
 
-pub fn pushq(mut sys_state: State, src: i8) -> State {
+pub fn pushq(mut sys_state: State, src: u8) -> State {
     sys_state.registers[4] -= 8;
     // register 4 is %rsp
     let address = sys_state.registers[4] as usize;
-    let mut write: i8;
-    for x in 7..0 {
-        write = extract_byte(x, sys_state.registers[src as usize]);
+    let mut write: u8;
+    for x in 0..8 {
+        write = extract_byte(7 - x, sys_state.registers[src as usize]);
+        println!("x: {}", x);
+        println!("write {}", write);
         // Now I'm starting to regret my choice of endianess...
-        sys_state.write_mem(address + 7 - (x as usize), write)
+        sys_state.write_mem(address + (x as usize), write)
     }
     sys_state.program_counter += 2;
     sys_state
 }
 
-pub fn popq(mut sys_state: State, dest: i8) -> State {
+pub fn popq(mut sys_state: State, dest: u8) -> State {
     sys_state.read_mem(sys_state.registers[4] as usize);
     let popped = combine_bytes(&sys_state);
+    println!("popped {}", popped);
     sys_state.registers[dest as usize] = popped;
     sys_state.registers[4] += 8;
     sys_state.program_counter += 2;
@@ -190,10 +194,10 @@ pub fn popq(mut sys_state: State, dest: i8) -> State {
 pub fn call(mut sys_state: State, dest: usize) -> State {
     sys_state.registers[4] -= 8;
     let address = sys_state.registers[4] as usize;
-    let mut write: i8;
-    for x in 7..0 {
-        write = extract_byte(x, sys_state.program_counter as i64);
-        sys_state.write_mem(address + 7 - (x as usize), write);
+    let mut write: u8;
+    for x in 0..8 {
+        write = extract_byte(7 - x, sys_state.program_counter as i64);
+        sys_state.write_mem(address + (x as usize), write);
 
     }
     sys_state.program_counter = dest;

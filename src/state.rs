@@ -21,8 +21,8 @@ pub struct State {
         Main memory is private as a nod to the fact that operations on main memory involve I/O.
         Note: In the Toy system, everything is big endian.
      */
-    main: [i8; 5000],
-    pub mem_bus: [i8; 10],
+    main: [u8; 5000],
+    pub mem_bus: [u8; 10],
     pub registers: [i64; 15],
     pub program_counter: usize,
     pub status: Status,
@@ -53,14 +53,13 @@ impl State {
         instruction.
     */
     pub fn read_mem(&mut self, index: usize) {
-        for x in 0..9 {
+        for x in 0..10 {
             self.mem_bus[x] = self.main[x + index];
         }
     }
 
-    pub fn write_mem(&mut self, index: usize, val: i8) {
+    pub fn write_mem(&mut self, index: usize, val: u8) {
         self.main[index] = val;
     }
-
 
 }

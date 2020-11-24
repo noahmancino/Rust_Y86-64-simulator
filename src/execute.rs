@@ -8,7 +8,7 @@ pub fn instruction_cycle(mut sys_state: State) -> State {
     let instruction_function = sys_state.mem_bus[0] as u8 & 0xf;
     println!("program counter: {}", sys_state.program_counter);
     println!("instruction type: {}", instruction_type);
-    println!("instructoin function: {}", instruction_function);
+    println!("instruction function: {}", instruction_function);
     sys_state = match instruction_type {
         0 => halt(sys_state),
         1 => {

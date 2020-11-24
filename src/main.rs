@@ -1,10 +1,9 @@
 use crate::instructions::combine_bytes;
-
 mod state;
 mod instructions;
 mod execute;
 mod assemble;
-
+use std::env::*;
 
 // Fetches, decodes, and executes the next instruction in memory.
 /*
@@ -21,6 +20,12 @@ fn execute_next(mut sys_state: state::State) {
  */
 
 fn main() {
+    for lines in assemble::tokenize("./example") {
+        for line in lines {
+            println!("token: {}", line);
+        }
+    }
+    return;
     let mut sys_state: state::State  = state::State::new();
     sys_state.registers[0] = 66;
     sys_state.registers[1] = 1;

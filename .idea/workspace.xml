@@ -12,12 +12,11 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="Nice!">
+    <list default="true" id="0310897e-463c-4f06-9236-3ab1c96e0189" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assemble.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/assemble.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/execute.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/execute.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/instructions.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/instructions.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run --package ISA_project --bin ISA_project" />
@@ -70,11 +74,6 @@
       <envs />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -95,7 +94,8 @@
       <workItem from="1602961494343" duration="3878000" />
       <workItem from="1602988888467" duration="9770000" />
       <workItem from="1603129039376" duration="138000" />
-      <workItem from="1603923547556" duration="25655000" />
+      <workItem from="1603923547556" duration="26880000" />
+      <workItem from="1606182698803" duration="5143000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1602789128597</created>
@@ -188,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603938530520</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary=".">
+      <created>1604099926622</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1604099926622</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,41 +215,51 @@
     <MESSAGE value="rmmovq and mrmovq should take an indirect addresses in the form of a register." />
     <MESSAGE value="rrmovq" />
     <MESSAGE value="Nice!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nice!" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1603943255800">
+    <state x="215" y="304" width="524" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606183894292">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="215" y="304" width="524" height="500" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1606183894292" />
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1604099926535">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1603943255800" />
-    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603129170561">
+    <state x="222" y="27" width="912" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1604099926535" />
+    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604124081030">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1603129170561" />
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom" timestamp="1604083141559">
+    <state x="471" y="174" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1604124081030" />
+    <state width="909" height="436" key="GridCell.Tab.0.bottom" timestamp="1606187721970">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1604124083291" />
+    <state width="909" height="436" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1606187721970" />
+    <state width="909" height="436" key="GridCell.Tab.0.center" timestamp="1606187721970">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1604124083291" />
+    <state width="909" height="436" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1606187721970" />
+    <state width="909" height="436" key="GridCell.Tab.0.left" timestamp="1606187721969">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1604124083290" />
+    <state width="909" height="436" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1606187721969" />
+    <state width="909" height="436" key="GridCell.Tab.0.right" timestamp="1606187721970">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1604124083291" />
+    <state width="909" height="436" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1606187721970" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604099930032">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1604083141559" />
-    <state width="1327" height="285" key="GridCell.Tab.0.center" timestamp="1604083141556">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1604083141556" />
-    <state width="1327" height="285" key="GridCell.Tab.0.left" timestamp="1604083141555">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1604083141555" />
-    <state width="1327" height="285" key="GridCell.Tab.0.right" timestamp="1604083141557">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state width="1327" height="285" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1604083141557" />
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604099918840">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1604099918840" />
-    <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602797852965">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="283" y="152" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1604099930032" />
+    <state x="417" y="115" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606187336118">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="297" y="89" width="762" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1366.741@0.27.1366.741" timestamp="1602797852965" />
+    <state x="417" y="115" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1606187336118" />
     <state x="473" y="334" width="429" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602802587808">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
